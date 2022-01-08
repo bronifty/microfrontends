@@ -1,19 +1,21 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 
-const Checkout = ({ productId }) => (
-  <div>
-    <div>Checkout</div>
-    <div>Product: {productId} </div>
+const Checkout = (props) => {
+  return (
     <div>
-      <button onClick={() => {}}>Change Image</button>
+      <div>Checkout</div>
+      <div>Product: {props.productid} </div>
+      <div>
+        <button onClick={() => {}}>Change Image</button>
+      </div>
+      <div>
+        <button onClick={() => {}}>Add to Cart</button>
+      </div>
+      <div></div>
     </div>
-    <div>
-      <button onClick={() => {}}>Add to Cart</button>
-    </div>
-    <div></div>
-  </div>
-);
+  );
+};
 
 global.diy.registerComponent('checkout', {
   create(node, props) {
