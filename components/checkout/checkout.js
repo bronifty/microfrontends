@@ -11,7 +11,7 @@ const Checkout = ({ store }) => {
   const changeImage = () => {
     store.images.next([
       'spacecats.jpg',
-      'anotherimage.png',
+      'https://unsplash.com/photos/-2RKYpYmkN4',
       'yetanotherimage.gif',
     ]);
   };

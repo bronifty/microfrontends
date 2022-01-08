@@ -2,7 +2,7 @@ import { BehaviorSubject } from 'rxjs';
 
 global.diy = {
   store: {
-    productId: new BehaviorSubject(345),
+    productId: new BehaviorSubject(2020),
     images: new BehaviorSubject([]),
   },
   components: {},
@@ -31,6 +31,8 @@ global.diy = {
     this.loadComponent(name);
   },
 };
+
+loadjs(['dist/checkout.js', 'dist/images.js']);
 
 // global.diy = {
 //   registerComponent(name, info) {
