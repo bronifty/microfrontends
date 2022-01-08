@@ -9,11 +9,7 @@ const Checkout = ({ store }) => {
     });
   }, []);
   const changeImage = () => {
-    store.images.next([
-      'spacecats.jpg',
-      'https://unsplash.com/photos/-2RKYpYmkN4',
-      'yetanotherimage.gif',
-    ]);
+    store.images.next(['spacecats.jpg']);
   };
   return (
     <div>
