@@ -1,17 +1,16 @@
+import { BehaviorSubject } from 'rxjs';
+
 global.diy = {
-  components: {
-    // checkout: {
-    //   create(node, props) {
-    //     ReactDOM.render(<Checkout {...props} />, node);
-    //   },
-    // },
+  store: {
+    productId: new BehaviorSubject(345),
+    images: new BehaviorSubject([]),
   },
+  components: {},
   loadComponent(name) {
     document.querySelectorAll(`diy-component[name='${name}']`).forEach((el) => {
       if (!el.getAttribute('loaded')) {
         const props = {
-          // name: 'checkout',
-          // productid: '12345',
+          store: this.store,
         };
         Array.from(el.attributes).forEach((attr) => {
           props[attr.name] = attr.value;
@@ -20,7 +19,7 @@ global.diy = {
         console.log(
           '\nthis.components:\t',
           this.components,
-          ' \tprops:\t',
+          ' \nprops:\t',
           props
         );
         el.setAttribute('loaded', true);

@@ -1,18 +1,29 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 
-const Checkout = (props) => {
+const Checkout = ({ store }) => {
+  const [product, setProduct] = React.useState(0);
+  React.useEffect(() => {
+    store.productId.subscribe({
+      next: (val) => setProduct(val),
+    });
+  }, []);
+  const changeImage = () => {
+    store.images.next([
+      'https://unsplash.com/photos/zGYFIzpUUCI',
+      'https://unsplash.com/photos/-2RKYpYmkN4',
+    ]);
+  };
   return (
     <div>
       <div>Checkout</div>
-      <div>Product: {props.productid} </div>
+      <div>Product: {product} </div>
       <div>
-        <button onClick={() => {}}>Change Image</button>
+        <button onClick={changeImage}>Change Image</button>
       </div>
       <div>
         <button onClick={() => {}}>Add to Cart</button>
       </div>
-      <div></div>
     </div>
   );
 };
