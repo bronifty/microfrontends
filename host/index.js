@@ -1,4 +1,5 @@
 import { BehaviorSubject } from 'rxjs';
+import loadjs from 'loadjs';
 
 global.diy = {
   store: {

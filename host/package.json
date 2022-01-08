@@ -13,6 +13,7 @@
     "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
+    "loadjs": "^4.2.0",
     "rxjs": "^7.5.1"
   }
 }

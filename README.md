@@ -12,8 +12,6 @@ cd components/images && yarn && yarn dev
 
 - now run the host's index.html file from a static server
 
-- if the loadjs link gets outdated, you can get a new one from [here](https://github.com/muicss/loadjs)
-
 - the checkout button doesn't do anything but the image button should give you a spacecat
 
 - it's being provided with fronted code from React and vanilla js components running on separate servers

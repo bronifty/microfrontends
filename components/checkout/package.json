@@ -13,6 +13,7 @@
     "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
+    "loadjs": "^4.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
